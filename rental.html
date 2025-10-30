@@ -11,66 +11,139 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f4f7f5;
-    }
-    header {
-      background: url('7.webp') center/cover no-repeat;
-      height: 65vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      color: white;
-      text-shadow: 0 3px 8px rgba(0,0,0,0.4);
-    }
-    header::before {
-      content:"";
-      position:absolute;
-      inset:0;
-      background: rgba(0,0,0,0.55);
-    }
-    header h1 {
-      position: relative;
-      font-weight: 800;
-      font-size: 2.8rem;
-      z-index: 2;
-    }
-    .outdoor-banner {
-      background: url('3.jpg') center/cover no-repeat;
-      height: 40vh;
-      position: relative;
-      margin-top: -40px;
-      border-radius: 0 0 50px 50px;
-    }
-    .item-card {
-      transition: all 0.35s ease;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-    .item-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-    .price {
-      font-weight: bold;
-      color: #2f5233;
-      font-size: 1.1rem;
-    }
-    .btn-sewa {
-      background-color: #2f5233;
-      color: white;
-      border: none;
-      transition: 0.3s;
-    }
-    .btn-sewa:hover {
-      background-color: #4d7d50;
-    }
-    .section-title {
-      color: #2f5233;
-      font-weight: 700;
-    }
+   body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== HERO UTAMA (HEADER) ===== */
+header {
+ 
+  height: 80vh; /* dibuat lebih tinggi agar jadi hero utama */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+header h1 {
+  position: relative;
+  font-weight: 800;
+  font-size: 3rem;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+header p {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* ===== KARTU PRODUK ===== */
+.item-card {
+  transition: all 0.35s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.price {
+  font-weight: bold;
+  color: #2f5233;
+  font-size: 1.1rem;
+}
+
+.btn-sewa {
+  background-color: #2f5233;
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-sewa:hover {
+  background-color: #4d7d50;
+}
+
+.section-title {
+  color: #2f5233;
+  font-weight: 700;
+}
+
+/* ===== HAPUS BANNER TAMBAHAN ===== */
+/* .outdoor-banner dihapus karena hanya satu foto utama */
+    
+  /* --- Form Pemesanan Modern --- */
+  .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .modal-header {
+    background: linear-gradient(135deg, #2f5233, #4d7d50);
+    color: #fff;
+  }
+  .modal-title {
+    font-weight: 600;
+  }
+  .modal-body {
+    background-color: #f9faf9;
+    padding: 1.8rem;
+  }
+  .modal-body .form-label {
+    font-weight: 600;
+    color: #2f5233;
+  }
+  .modal-body .form-control {
+    border-radius: 10px;
+    border: 1px solid #d0d8d2;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+  }
+  .modal-body .form-control:focus {
+    border-color: #2f5233;
+    box-shadow: 0 0 5px rgba(47,82,51,0.3);
+  }
+  .modal-footer {
+    background-color: #f4f7f5;
+    border-top: 1px solid #d0d8d2;
+    padding: 1rem 1.5rem;
+  }
+  .btn-success {
+    background: linear-gradient(135deg, #2f5233, #3e6a41);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  .btn-success:hover {
+    background: #4d7d50;
+    transform: scale(1.03);
+  }
+  .alert-light {
+    background-color: #eef4ef;
+    border-radius: 10px;
+  }
+
+
     footer {
       background:#2f5233;
       color:#fff;
@@ -94,9 +167,15 @@
   </nav>
 
   <!-- HERO -->
-  <header>
-    <h1>Sewa Alat Camping Lengkap</h1>
-  </header>
+  <header style="background: url('RENTAL/latar belakang.png') center/cover no-repeat; height: 65vh; display: flex; align-items: center; justify-content: center; position: relative; color: white; text-shadow: 0 3px 8px rgba(0,0,0,0.4);">
+  <div style="position: relative; z-index: 2; text-align: center;">
+    <h1 style="font-weight: 800; font-size: 2.8rem;">Rental Alat Outdoor</h1>
+    <p style="font-size: 1.2rem;">Sewa perlengkapan camping dan pendakian lengkap di Samalas Camp 🏕️</p>
+  </div>
+  <div style="content:''; position:absolute; inset:0; background: rgba(0,0,0,0.55); z-index:1;"></div>
+</header>
+
+
 
   <!-- OUTDOOR BANNER -->
   <div class="outdoor-banner"></div>
@@ -111,7 +190,7 @@
         <!-- Item 1 -->
         <div class="col-md-4">
           <div class="card item-card h-100 shadow-sm">
-            <img src="RENTAL/TENDA.png" class="card-img-top" alt="Tenda Dome">
+            <img src="RENTAL/tenda.png" class="card-img-top" alt="Tenda Dome">
             <div class="card-body d-flex flex-column">
               <h5 class="fw-semibold">Tenda Dome (2–4 Orang)</h5>
               <p class="small text-muted flex-grow-1">Tahan hujan, mudah dipasang, nyaman untuk keluarga kecil.</p>
@@ -124,7 +203,7 @@
         <!-- Item 2 -->
         <div class="col-md-4">
           <div class="card item-card h-100 shadow-sm">
-            <img src="RENTAL/SLEPING.png" class="card-img-top" alt="Sleeping Bag">
+            <img src="RENTAL/sleping.png" class="card-img-top" alt="Sleeping Bag">
             <div class="card-body d-flex flex-column">
               <h5 class="fw-semibold">Sleeping Bag</h5>
               <p class="small text-muted flex-grow-1">Hangat, empuk, cocok untuk malam dingin di alam terbuka.</p>
@@ -137,7 +216,7 @@
         <!-- Item 3 -->
         <div class="col-md-4">
           <div class="card item-card h-100 shadow-sm">
-            <img src="RENTAL/KOMPOR.png" class="card-img-top" alt="Kompor Portable">
+            <img src="RENTAL/kompor.png" class="card-img-top" alt="Kompor Portable">
             <div class="card-body d-flex flex-column">
               <h5 class="fw-semibold">Kompor Portable + Gas</h5>
               <p class="small text-muted flex-grow-1">Kompak, ringan, cocok untuk masak cepat di alam.</p>
@@ -150,7 +229,7 @@
         <!-- Item 4 -->
         <div class="col-md-4">
           <div class="card item-card h-100 shadow-sm">
-            <img src="RENTAL/LAMPU.png" class="card-img-top" alt="Lampu Camping">
+            <img src="RENTAL/lampu tenda.png" class="card-img-top" alt="Lampu Camping">
             <div class="card-body d-flex flex-column">
               <h5 class="fw-semibold">Lampu Camping LED</h5>
               <p class="small text-muted flex-grow-1">Cahaya hangat dan hemat daya untuk penerangan malam.</p>
@@ -163,7 +242,7 @@
         <!-- Item 5 -->
         <div class="col-md-4">
           <div class="card item-card h-100 shadow-sm">
-            <img src="RENTAL/KURSI LIPAT.png" class="card-img-top" alt="Kursi Lipat">
+            <img src="RENTAL/kursi.png" class="card-img-top" alt="Kursi Lipat">
             <div class="card-body d-flex flex-column">
               <h5 class="fw-semibold">Kursi Lipat Outdoor</h5>
               <p class="small text-muted flex-grow-1">Ringan, mudah dibawa, dan nyaman untuk bersantai.</p>
@@ -176,7 +255,7 @@
         <!-- Item 6 -->
         <div class="col-md-4">
           <div class="card item-card h-100 shadow-sm">
-            <img src="RENTAL/8.png" class="card-img-top" alt="Meja Lipat">
+            <img src="RENTAL/meja.png" class="card-img-top" alt="Meja Lipat">
             <div class="card-body d-flex flex-column">
               <h5 class="fw-semibold">Meja Lipat Camping</h5>
               <p class="small text-muted flex-grow-1">Ideal untuk makan bersama atau menyiapkan makanan.</p>
@@ -190,82 +269,254 @@
   </section>
 
   <!-- MODAL FORM PEMESANAN -->
-  <div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg-success text-white">
-          <h5 class="modal-title">Form Pemesanan Alat Camping</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form id="formSewa">
-          <div class="modal-body">
-            <div class="mb-3">
+ <!-- MODAL FORM PEMESANAN -->
+<div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow-lg">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-cart-check me-2"></i>Form Pemesanan Alat Camping</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="formSewa">
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
               <label class="form-label">Nama Lengkap</label>
-              <input type="text" id="nama" class="form-control" required>
+              <input type="text" id="nama" class="form-control" placeholder="Masukkan nama lengkap" required>
             </div>
-            <div class="mb-3">
+            <div class="col-md-6">
               <label class="form-label">Nomor WhatsApp</label>
               <input type="tel" id="wa" class="form-control" placeholder="contoh: 081234567890" required>
             </div>
-            <div class="mb-3">
+            <div class="col-12">
               <label class="form-label">Alat yang Disewa</label>
               <input type="text" id="alatSewa" class="form-control" readonly>
             </div>
-            <div class="mb-3">
+            <div class="col-md-6">
               <label class="form-label">Tanggal Sewa</label>
               <input type="date" id="tanggal" class="form-control" required>
             </div>
-            <div class="mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Tanggal Pengembalian</label>
+              <input type="date" id="tanggalKembali" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Jumlah (unit)</label>
+              <input type="number" id="jumlah" class="form-control" min="1" placeholder="Masukkan jumlah" required>
+              <small class="text-muted d-block mt-1" id="stokInfo"></small>
+            </div>
+            <div class="col-12">
+              <div id="previewTotal" class="alert alert-light border mt-3">
+                <strong>Total:</strong> Rp 0
+              </div>
+            </div>
+            <div class="col-12">
               <label class="form-label">Catatan Tambahan</label>
-              <textarea id="catatan" class="form-control" rows="3" placeholder="Opsional"></textarea>
+              <textarea id="catatan" class="form-control" rows="3" placeholder="Tambahkan catatan (opsional)"></textarea>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-success">Kirim Pemesanan</button>
-          </div>
-        </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <span class="text-muted small"><i class="bi bi-shield-check"></i> Data Anda aman & rahasia</span>
+          <button type="submit" class="btn btn-success px-4">Kirim Pemesanan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- KONFIRMASI PEMESANAN (Modal) -->
+<div class="modal fade" id="konfirmasiModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header bg-success text-white rounded-top-4">
+        <h5 class="modal-title"><i class="bi bi-check-circle me-2"></i>Konfirmasi Pemesanan</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="konfirmasiIsi"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="button" id="btnKirimWA" class="btn btn-success px-4">
+          <i class="bi bi-whatsapp me-1"></i>Kirim Sekarang
+        </button>
       </div>
     </div>
   </div>
+</div>
+
 
   <footer class="py-4 text-center" id="kontak">
     <small>© 2025 Samalas Camp — Hidden Heaven</small>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const modal = document.getElementById('formModal');
-    modal.addEventListener('show.bs.modal', event => {
-      const button = event.relatedTarget;
-      const alat = button.getAttribute('data-name');
-      document.getElementById('alatSewa').value = alat;
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dataAlat = {
+    "Tenda Dome (2–4 Orang)": { stok: 5, harga: 75000 },
+    "Sleeping Bag": { stok: 10, harga: 25000 },
+    "Kompor Portable + Gas": { stok: 8, harga: 30000 },
+    "Lampu Camping LED": { stok: 12, harga: 15000 },
+    "Kursi Lipat Outdoor": { stok: 10, harga: 20000 },
+    "Meja Lipat Camping": { stok: 6, harga: 25000 },
+  };
+
+  const sewaButtons = document.querySelectorAll(".btn-sewa");
+  sewaButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.getElementById("formSewa").reset();
+      const alat = btn.getAttribute("data-name");
+      document.getElementById("alatSewa").value = alat;
+      document.getElementById("stokInfo").innerText = `Stok tersedia: ${dataAlat[alat].stok} unit`;
+      document.getElementById("previewTotal").innerHTML = `<strong>Total:</strong> Rp 0`;
     });
+  });
 
-    document.getElementById("formSewa").addEventListener("submit", function(e){
-      e.preventDefault();
-      const nama = document.getElementById("nama").value.trim();
-      const wa = document.getElementById("wa").value.trim();
-      const alat = document.getElementById("alatSewa").value.trim();
-      const tanggal = document.getElementById("tanggal").value;
-      const catatan = document.getElementById("catatan").value.trim();
+  function updateTotal() {
+    const alat = document.getElementById("alatSewa").value;
+    const jumlah = parseInt(document.getElementById("jumlah").value) || 0;
+    const tglSewa = document.getElementById("tanggal").value;
+    const tglKembali = document.getElementById("tanggalKembali").value;
 
-      if(!nama || !wa || !tanggal){
-        alert("Harap isi semua data wajib sebelum mengirim pemesanan!");
-        return;
-      }
+    if (!alat || !tglSewa || !tglKembali || jumlah <= 0) {
+      document.getElementById("previewTotal").innerHTML = `<strong>Total:</strong> Rp 0`;
+      return;
+    }
 
-      if(!/^08[0-9]{8,}$/.test(wa)){
-        alert("Nomor WhatsApp tidak valid. Gunakan format 08xxxxxxxxxx");
-        return;
-      }
+    const start = new Date(tglSewa);
+    const end = new Date(tglKembali);
+    const lamaSewa = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
 
-      const pesan = `Halo Samalas Camp!%0ASaya ingin menyewa alat camping:%0A%0A` +
-                    `Nama: ${nama}%0ANo WA: ${wa}%0AAlat: ${alat}%0ATanggal: ${tanggal}%0A` +
-                    `Catatan: ${catatan || '-'}`;
+    if (lamaSewa <= 0) {
+      document.getElementById("previewTotal").innerHTML =
+        `<strong style="color:red;">⚠️ Tanggal pengembalian harus setelah tanggal sewa!</strong>`;
+      return;
+    }
 
-      window.open(`https://wa.me/6281234567890?text=${pesan}`, "_blank");
-    });
-  </script>
+    if (jumlah > dataAlat[alat].stok) {
+      document.getElementById("previewTotal").innerHTML =
+        `<strong style="color:red;">⚠️ Melebihi stok tersedia!</strong>`;
+      return;
+    }
+
+    const total = jumlah * dataAlat[alat].harga * lamaSewa;
+    document.getElementById("previewTotal").innerHTML =
+      `<strong>Total (${lamaSewa} hari):</strong> Rp ${total.toLocaleString('id-ID')}`;
+  }
+
+  ["jumlah", "tanggal", "tanggalKembali"].forEach(id => {
+    document.getElementById(id).addEventListener("input", updateTotal);
+    document.getElementById(id).addEventListener("change", updateTotal);
+  });
+
+  document.getElementById("formSewa").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const nama = document.getElementById("nama").value.trim();
+    const wa = document.getElementById("wa").value.trim();
+    const alat = document.getElementById("alatSewa").value.trim();
+    const tanggal = document.getElementById("tanggal").value;
+    const tanggalKembali = document.getElementById("tanggalKembali").value;
+    const jumlah = parseInt(document.getElementById("jumlah").value);
+    const catatan = document.getElementById("catatan").value.trim();
+
+    if (!nama || !wa || !alat || !tanggal || !tanggalKembali || !jumlah) {
+      alert("⚠️ Lengkapi semua data sebelum mengirim pemesanan!");
+      return;
+    }
+
+    if (!/^08[0-9]{8,}$/.test(wa)) {
+      alert("⚠️ Nomor WhatsApp tidak valid. Gunakan format 08xxxxxxxxxx");
+      return;
+    }
+
+    const start = new Date(tanggal);
+    const end = new Date(tanggalKembali);
+    const lamaSewa = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+
+    if (lamaSewa <= 0) {
+      alert("⚠️ Tanggal pengembalian harus setelah tanggal sewa!");
+      return;
+    }
+
+    if (jumlah > dataAlat[alat].stok) {
+      alert(`❌ Stok ${alat} tidak mencukupi! Hanya tersisa ${dataAlat[alat].stok} unit.`);
+      return;
+    }
+
+    const total = jumlah * dataAlat[alat].harga * lamaSewa;
+
+    // === Tampilkan Modal Konfirmasi ===
+    const modal = document.createElement("div");
+    modal.classList.add("modal-overlay");
+    modal.innerHTML = `
+      <div class="modal-box shadow p-4 rounded-3 bg-white">
+        <h5 class="text-success fw-bold mb-3"><i class="bi bi-check-circle-fill"></i> Konfirmasi Pemesanan</h5>
+        <p><strong>Nama:</strong> ${nama}</p>
+        <p><strong>No. WhatsApp:</strong> ${wa}</p>
+        <p><strong>Alat:</strong> ${alat}</p>
+        <p><strong>Jumlah:</strong> ${jumlah} unit</p>
+        <p><strong>Tanggal Sewa:</strong> ${tanggal}</p>
+        <p><strong>Tanggal Kembali:</strong> ${tanggalKembali}</p>
+        <p><strong>Lama Sewa:</strong> ${lamaSewa} hari</p>
+        <p><strong>Total Biaya:</strong> Rp ${total.toLocaleString('id-ID')}</p>
+        <p><strong>Catatan:</strong> ${catatan || '-'}</p>
+        <div class="text-end mt-4">
+          <button id="batalBtn" class="btn btn-outline-danger me-2">Batal</button>
+          <button id="kirimBtn" class="btn btn-success">Kirim Sekarang</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Tutup modal
+    document.getElementById("batalBtn").onclick = () => modal.remove();
+
+    // Kirim ke WhatsApp
+    document.getElementById("kirimBtn").onclick = () => {
+      const pesan =
+        `🏕️ *Halo Samalas Camp!*%0A` +
+        `Saya ingin menyewa peralatan camping berikut:%0A%0A` +
+        `──────────────────────────────%0A` +
+        `👤 *Nama:* ${nama}%0A` +
+        `📱 *No. WhatsApp:* ${wa}%0A` +
+        `🛠️ *Alat Disewa:* ${alat}%0A` +
+        `🔢 *Jumlah:* ${jumlah} unit%0A` +
+        `📅 *Tanggal Sewa:* ${tanggal}%0A` +
+        `📆 *Tanggal Kembali:* ${tanggalKembali}%0A` +
+        `⏳ *Lama Sewa:* ${lamaSewa} hari%0A` +
+        `💰 *Total Biaya:* Rp ${total.toLocaleString('id-ID')}%0A` +
+        `📝 *Catatan:* ${catatan || "-"}%0A` +
+        `──────────────────────────────%0A%0A` +
+        `Terima kasih! Mohon konfirmasi ketersediaan alatnya 🙏`;
+
+      const waAdmin = "6283116021711";
+      window.open(`https://wa.me/${waAdmin}?text=${pesan}`, "_blank");
+      modal.remove();
+    };
+  });
+});
+
+// Tambahkan gaya modal
+const style = document.createElement("style");
+style.textContent = `
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+}
+.modal-box {
+  max-width: 420px;
+  width: 90%;
+}
+`;
+document.head.appendChild(style);
+</script>
+
+
+
 
 </body>
 </html>
