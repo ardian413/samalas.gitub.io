@@ -148,6 +148,64 @@
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
+
+  
+  
+/* Styling untuk kartu metode pembayaran */
+.payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.payment-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 150px;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  border-color: #198754;
+  box-shadow: 0 4px 12px rgba(25,135,84,0.15);
+}
+
+.payment-card input[type="radio"] {
+  display: none;
+}
+
+/* Saat radio button dipilih */
+.payment-card input[type="radio"]:checked + .icon,
+.payment-card input[type="radio"]:checked ~ span {
+  color: #198754;
+  font-weight: 600;
+}
+
+/* Ikon di dalam kartu */
+.payment-card .icon {
+  font-size: 2rem;
+  color: #6c757d;
+  margin-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.payment-card span {
+  font-size: 0.95rem;
+  color: #555;
+  transition: color 0.3s;
+}
+
+
   </style>
 
   <script>
@@ -279,7 +337,7 @@
       <!-- Gambar -->
       <div class="col-lg-6 order-lg-2 text-center">
         <div class="position-relative">
-          <img src="4.jpg" alt="Samalas Camp" class="img-fluid rounded-4 shadow-lg about-img">
+          <img src="7.webp" alt="Samalas Camp" class="img-fluid rounded-4 shadow-lg about-img">
           <div class="position-absolute top-0 start-0 bg-success bg-opacity-75 text-white rounded-end px-3 py-2" style="font-size: 0.9rem; font-weight:600;">
             🌿 Experience Nature
           </div>
@@ -454,45 +512,115 @@
     </div>
   </section>
 
-  <!-- FORM PEMESANAN -->
-  <section id="contact" class="py-5 bg-success bg-opacity-10">
-    <div class="container">
-      <h2 class="text-center mb-4 text-success">Form Pemesanan Samalas Camp</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card shadow-sm p-4">
-            <form id="waForm">
-              <div class="mb-3">
-                <label for="nama" class="form-label">Nama Lengkap</label>
-                <input type="text" id="nama" class="form-control" placeholder="Masukkan nama Anda" required>
-              </div>
+ <!-- FORM PEMESANAN -->
+<!-- 🌿 FORM PEMESANAN MODERN DENGAN KONFIRMASI -->
+<section id="contact" class="py-5" style="background: linear-gradient(135deg, #e8f5e9, #ffffff);">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold text-success">
+      <i class="bi bi-tent"></i> Form Pemesanan Samalas Camp
+    </h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-lg border-0 p-4 rounded-4" style="backdrop-filter: blur(8px); background: rgba(255,255,255,0.9);">
+          <form id="waForm">
+            <!-- Nama -->
+            <div class="mb-3">
+              <label for="nama" class="form-label fw-semibold text-success">
+                <i class="bi bi-person-circle me-2"></i>Nama Lengkap
+              </label>
+              <input type="text" id="nama" class="form-control form-control-lg rounded-3" placeholder="Masukkan nama Anda" required>
+            </div>
 
-              <div class="mb-3">
-                <label for="paket" class="form-label">Pilih Paket</label>
-                <select id="paket" class="form-select" required>
-                  <option value="">-- Pilih Paket --</option>
-                  <option value="Bell Tent (2 Orang) - Rp 400.000 / malam">Bell Tent (2 Orang)</option>
-                  <option value="Platform Cabin (4 Orang) - Rp 950.000 / malam">Platform Cabin (4 Orang)</option>
-                  <option value="Full-Board Package - Rp 200.000 / orang / hari">Full-Board Package</option>
-                </select>
-              </div>
+            <!-- Paket -->
+            <div class="mb-3">
+              <label for="paket" class="form-label fw-semibold text-success">
+                <i class="bi bi-box2-heart me-2"></i>Pilih Paket
+              </label>
+              <select id="paket" class="form-select form-select-lg rounded-3" required>
+                <option value="">-- Pilih Paket --</option>
+                <option value="Bell Tent (2 Orang) - Rp 400.000 / malam">Bell Tent (2 Orang)</option>
+                <option value="Platform Cabin (4 Orang) - Rp 950.000 / malam">Platform Cabin (4 Orang)</option>
+                <option value="Full-Board Package - Rp 200.000 / orang / hari">Full-Board Package</option>
+              </select>
+            </div>
 
-              <div class="mb-3">
-                <label for="tanggal" class="form-label">Tanggal Menginap</label>
-                <input type="date" id="tanggal" class="form-control" required>
-              </div>
+            <!-- Tanggal -->
+            <div class="mb-3">
+              <label for="tanggal" class="form-label fw-semibold text-success">
+                <i class="bi bi-calendar-check me-2"></i>Tanggal Menginap
+              </label>
+              <input type="date" id="tanggal" class="form-control form-control-lg rounded-3" required>
+            </div>
 
-              <div class="mb-3">
-                <label for="pesan" class="form-label">Catatan Tambahan</label>
-                <textarea id="pesan" class="form-control" placeholder="Tulis permintaan khusus (opsional)" rows="3"></textarea>
-              </div>
+            <!-- Metode Pembayaran -->
+            <div class="mb-3">
+              <label for="metode" class="form-label fw-bold">Metode Pembayaran</label>
+              <div class="payment-options d-flex flex-wrap gap-3">
+                <label class="payment-card">
+                  <input type="radio" name="metode" value="Bank Transfer (BCA 1234567890 a.n. Samalas Camp)" required>
+                  <div class="icon"><i class="bi bi-bank2"></i></div>
+                  <span>Bank Transfer</span>
+                </label>
 
-              <div class="text-end">
-                <button type="submit" class="btn btn-success px-4">Kirim ke WhatsApp</button>
+                <label class="payment-card">
+                  <input type="radio" name="metode" value="Cash on Delivery (COD)">
+                  <div class="icon"><i class="bi bi-truck"></i></div>
+                  <span>COD</span>
+                </label>
               </div>
-            </form>
-          </div>
+            </div>
+
+             <!-- Info rekening -->
+              <div id="bankInfo" class="alert alert-light border mt-3 d-none">
+                <h6 class="mb-1 text-success fw-bold"><i class="bi bi-credit-card-2-front"></i> Transfer ke:</h6>
+                <p class="mb-0">
+                  💳 <strong>BCA</strong> – <span class="text-dark">1234567890</span><br>
+                  🧾 a.n. <strong>Samalas Camp</strong><br>
+                  📞 Konfirmasi bukti transfer ke WhatsApp setelah pembayaran.
+                </p>
+              </div>
+            </div>
+
+            <!-- Catatan -->
+            <div class="mb-3">
+              <label for="pesan" class="form-label fw-semibold text-success">
+                <i class="bi bi-chat-left-text me-2"></i>Catatan Tambahan
+              </label>
+              <textarea id="pesan" class="form-control form-control-lg rounded-3" placeholder="Tulis permintaan khusus (opsional)" rows="3"></textarea>
+            </div>
+
+            <!-- Tombol -->
+            <div class="text-end mt-4">
+              <button type="submit" class="btn btn-success btn-lg rounded-3 px-5 shadow-sm">
+                <i class="bi bi-whatsapp me-2"></i>Konfirmasi Pemesanan
+              </button>
+            </div>
+          </form>
         </div>
+      </div>
+
+<!-- 🌿 MODAL KONFIRMASI -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="confirmModalLabel"><i class="bi bi-check-circle me-2"></i>Konfirmasi Pemesanan</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-1"><strong>Nama:</strong> <span id="confirmNama"></span></p>
+        <p class="mb-1"><strong>Paket:</strong> <span id="confirmPaket"></span></p>
+        <p class="mb-1"><strong>Tanggal:</strong> <span id="confirmTanggal"></span></p>
+        <p class="mb-1"><strong>Metode Pembayaran:</strong> <span id="confirmMetode"></span></p>
+        <p class="mb-1"><strong>Catatan:</strong> <span id="confirmPesan"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary rounded-3" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-success rounded-3" id="sendWhatsApp"><i class="bi bi-send-fill me-2"></i>Kirim Sekarang</button>
+      </div>
+    </div>
+  </div>
+</div>
 
             <!-- Google Maps -->
             <div class="mt-4">
@@ -549,15 +677,27 @@
   </script>
   <script>
   document.getElementById("waForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const adminNumber = "6283116021711"; // ganti dengan nomor WA kamu tanpa 0 di depan
-    const nama = document.getElementById("nama").value;
-    const paket = document.getElementById("paket").value;
-    const tanggal = document.getElementById("tanggal").value;
-    const pesan = document.getElementById("pesan").value || "-";
+  const nama = document.getElementById("nama").value;
+  const paket = document.getElementById("paket").value;
+  const tanggal = document.getElementById("tanggal").value;
+  const metode = document.querySelector('input[name="metode"]:checked')?.value || "-";
+  const pesan = document.getElementById("pesan").value || "-";
 
-    // Format pesan WhatsApp (pakai enter, bukan %0A)
+  // Tampilkan ke modal konfirmasi
+  document.getElementById("confirmNama").textContent = nama;
+  document.getElementById("confirmPaket").textContent = paket;
+  document.getElementById("confirmTanggal").textContent = tanggal;
+  document.getElementById("confirmMetode").textContent = metode;
+  document.getElementById("confirmPesan").textContent = pesan;
+
+  // Tampilkan modal
+  new bootstrap.Modal(document.getElementById("confirmModal")).show();
+
+  // Saat tombol kirim ditekan
+  document.getElementById("sendWhatsApp").onclick = function() {
+    const adminNumber = "6283116021711"; // Ganti dengan nomor kamu
     const waText = `🌿 *Pemesanan Samalas Camp* 🌿
 
 Halo Admin Samalas Camp,
@@ -566,6 +706,7 @@ Saya ingin melakukan pemesanan dengan detail sebagai berikut:
 👤 *Nama:* ${nama}
 🏕️ *Paket:* ${paket}
 📅 *Tanggal Menginap:* ${tanggal}
+💳 *Metode Pembayaran:* ${metode}
 📝 *Catatan:* ${pesan}
 
 Mohon konfirmasi ketersediaan dan total biaya. Terima kasih 🙏
@@ -573,18 +714,16 @@ Mohon konfirmasi ketersediaan dan total biaya. Terima kasih 🙏
 Salam hangat,
 ${nama}`;
 
-    // Encode seluruh teks agar emoji & karakter spesial tidak rusak
     const encodedText = encodeURIComponent(waText);
-
-    // Buka WhatsApp
     window.open(`https://wa.me/${adminNumber}?text=${encodedText}`, "_blank");
-  });
+  };
+});
 
   // Daftar gambar hero
   const heroImages = [
     "3.jpg",
     "5.jpg.webp",
-    "1.jpg.webp",
+    "7.webp",
     "2.webp"
   ];
 
