@@ -149,6 +149,15 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
 
+
+  .hover-card {
+    transition: all 0.3s ease;
+  }
+  .hover-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  }
+
   
   
 /* Styling untuk kartu metode pembayaran */
@@ -408,36 +417,39 @@
   </div>
 </section>
 
-    <section id="services" class="py-5" style="background-color:#f8f9fa;">
+  <section id="services" class="py-5" style="background-color:#f8f9fa;">
   <div class="container text-center">
-    <h2 class="fw-bold mb-4" style="color:#2f5233;">Layanan Kami</h2>
-    <p class="text-muted mb-5">Nikmati pengalaman camping terbaik dengan berbagai layanan unggulan dari Samalas Camp.</p>
+    <h2 class="fw-bold mb-3" style="color:#2f5233;">Layanan Kami</h2>
+    <p class="text-muted mb-5">Kami menyediakan layanan terbaik untuk memastikan pengalaman camping Anda di <strong>Samalas Camp</strong> lebih nyaman, aman, dan berkesan.</p>
 
     <div class="row g-4">
       <!-- Service 1 -->
       <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100 service-card p-3">
+        <div class="card border-0 shadow-sm h-100 service-card p-4 hover-card">
           <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Catering" class="mx-auto mb-3" style="width:80px;">
-          <h5 class="fw-semibold">Catering</h5>
-          <p class="small text-muted">Hidangan lokal segar disajikan langsung ke tenda Anda, membuat pengalaman menginap semakin nikmat.</p>
+          <h5 class="fw-semibold mb-2" style="color:#2f5233;">Catering</h5>
+          <p class="text-muted small mb-3">Nikmati hidangan lokal segar yang disajikan langsung ke tenda Anda untuk melengkapi suasana malam di alam terbuka.</p>
         </div>
       </div>
 
       <!-- Service 2 -->
       <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100 service-card p-3">
+        <div class="card border-0 shadow-sm h-100 service-card p-4 hover-card">
           <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Guided Trek" class="mx-auto mb-3" style="width:80px;">
-          <h5 class="fw-semibold">Pemandu Pendakian</h5>
-          <p class="small text-muted">Pemandu berpengalaman siap menemani perjalanan Anda menjelajahi alam dengan aman dan seru.</p>
+          <h5 class="fw-semibold mb-2" style="color:#2f5233;">Pemandu Pendakian</h5>
+          <p class="text-muted small mb-3">Ditemani pemandu profesional yang berpengalaman untuk menjelajahi keindahan alam Samalas dengan aman dan seru.</p>
         </div>
       </div>
 
-      <!-- Service 3 -->
+      <!-- Service 3 (Sewa Perlengkapan) -->
       <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100 service-card p-3">
+        <div class="card border-0 shadow-sm h-100 service-card p-4 hover-card">
           <img src="https://cdn-icons-png.flaticon.com/512/820/820623.png" alt="Equipment Rental" class="mx-auto mb-3" style="width:80px;">
-          <h5 class="fw-semibold">Sewa Perlengkapan</h5>
-          <p class="small text-muted">Tersedia perlengkapan camping lengkap seperti sleeping bag, kompor, dan tenda tambahan.</p>
+          <h5 class="fw-semibold mb-2" style="color:#2f5233;">Sewa Perlengkapan</h5>
+          <p class="text-muted small mb-3">Lengkapi petualangan Anda dengan perlengkapan camping seperti tenda, sleeping bag, dan kompor portable.</p>
+          <a href="rental.html" class="btn btn-success btn-sm rounded-pill px-4 mt-auto" style="background-color:#2f5233; border:none;">
+            Sewa Sekarang
+          </a>
         </div>
       </div>
     </div>
